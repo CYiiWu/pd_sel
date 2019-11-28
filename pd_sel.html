@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src='./pd_sel.js'></script>
+    <script src='./common.js'></script>
+    <link rel="stylesheet" href="./pdSel.css">
+    <link rel="stylesheet" href="./init.css">
+</head>
+<body>
+    <div id="text" onclick="openSelect()">
+        选项
+    </div>
+</body>
+<script>
+    function openSelect(){
+        var arr=['数值1','数值2']
+        var arr=[{name:'数值1',value:1},{name:'数值2',value:2}]
+        var arr=[{name:'行1',child:[{name:'数值1',value:1},{name:'数值3',value:3}]},{name:'行2',child:[{name:'数值2',value:2},{name:'数值4',value:4}]}]
+        $('#text').createSelect(arr,'请选择','name','child',(res)=>{
+            console.log(res)
+        })
+    }
+    
+</script>
+</html>

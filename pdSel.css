@@ -1,0 +1,147 @@
+.cube-popup{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.cube-popup-mask {
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #25262d;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    pointer-events: auto;
+}
+.opacity{
+    opacity: .4;
+}
+.cube-popup-container, .cube-popup-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.cube-popup-container {
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate(100%,100%);
+    transform: translate(100%,100%);
+}
+.cube-popup-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate(-100%,-100%);
+    transform: translate(-100%,-100%);
+    pointer-events: auto;
+}
+.cube-picker-panel {
+    height: 273px;
+    text-align: center;
+    font-size: 14px;
+    background: #fff;
+    transition: all .3s ease-in-out;
+}
+.cube-picker-active{
+    transform: translate3d(0, 100%, 0);
+    
+}
+.cube-picker-choose {
+    position: relative;
+    height: 60px;
+}
+/* 按钮 */
+.cube-picker-cancel, .cube-picker-confirm {
+    line-height: 60px;
+    padding: 0 16px;
+    box-sizing: content-box;
+    font-size: 14px;
+}
+.cube-picker-cancel {
+    position: absolute;
+    left: 0;
+    color: #999;
+    
+}
+.cube-picker-confirm {
+    position: absolute;
+    right: 0;
+    color: #fc9153;
+}
+.cube-picker-title-group {
+    padding: 0 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.cube-picker-content {
+    position: relative;
+    top: 20px;
+}
+.cube-picker-content>i {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    pointer-events: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.cube-picker-content>.border-bottom-1px {
+    top: 0;
+    background: -webkit-linear-gradient(bottom,hsla(0,0%,100%,.4),hsla(0,0%,100%,.8));
+    background: linear-gradient(0deg,hsla(0,0%,100%,.4),hsla(0,0%,100%,.8));
+}
+.cube-picker-content>.border-top-1px {
+    bottom: 0;
+    background: -webkit-linear-gradient(top,hsla(0,0%,100%,.4),hsla(0,0%,100%,.8));
+    background: linear-gradient(180deg,hsla(0,0%,100%,.4),hsla(0,0%,100%,.8));
+}
+.cube-picker-wheel-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 16px;
+}
+.cube-picker-wheel-wrapper>div {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-basis: 1e-9px;
+    flex-basis: 1e-9px;
+    width: 1%;
+    height: 173px;
+    overflow: hidden;
+    font-size: 20px;
+}
+.cube-picker-wheel-scroll {
+    padding: 0;
+    margin-top: 68px;
+    line-height: 36px;
+    list-style: none;
+}
+.cube-picker-wheel-item {
+    font-size: .26rem;
+}
+.cube-picker-wheel-item {
+    list-style: none;
+    height: 36px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #333;
+}
